@@ -2,15 +2,19 @@ class PostsController < ApplicationController
     before_action :authenticate
 
     def new
+        @post = Post.new
     end
 
     def create
-        post = Post.new(
+        @post = Post.new(
             content: params[:content],
             user_id: current_user.id
         )
-        post.save
-        redirect_to posts_new_path
+        if  @post.save
+            redirect_to("/posts/#{@post.id}")
+        else
+            render(:new)
+        end
     end
 
     def index
