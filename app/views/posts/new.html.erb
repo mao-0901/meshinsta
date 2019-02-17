@@ -2,7 +2,11 @@
     <%= message %>
 <% end %>
 
-<%= form_tag("/posts") do %>
+
+
+
+<%= form_tag("/posts", multipart: true) do %>
     <textarea name="content"></textarea>
+    <%= file_field_tag :image %>
     <input type="submit" value="投稿">
 <% end %>

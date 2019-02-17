@@ -8,7 +8,8 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(
             content: params[:content],
-            user: current_user
+            user: current_user,
+            image: params[:image]
         )
         if  @post.save
             redirect_to("/posts/#{@post.id}")
