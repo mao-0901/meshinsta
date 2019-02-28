@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get "/posts" => "posts#index"
   get "/posts/:id" => "posts#show"
 
+  post "/likes/:id/create" => "likes#create"
+
 end

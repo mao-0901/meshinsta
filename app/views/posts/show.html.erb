@@ -1,2 +1,3 @@
 <%= @post.content %>
+<%= link_to("食べたい！", "/likes/#{@post.id}/create", {method: "post"}) %>
 <%= image_tag @post.image.to_s %>
