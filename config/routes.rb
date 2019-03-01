@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get "/posts/:id" => "posts#show"
 
   post "/likes/:id/create" => "likes#create"
-
+	post "/likes/:id/destroy" => "likes#destroy"
 end
