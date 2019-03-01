@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
     <div>
         <%= post.content %>
-        <%=link_to("リンク", "/posts/#{post.id}") %>
+        <%=link_to("リンク", post_path(post)) %>
     </div>
 <% end %>

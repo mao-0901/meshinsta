@@ -1,7 +1,7 @@
 <%= @post.content %>
 <%= image_tag @post.image.to_s %>
-<% if Like.find_by(user_id: current_user, post_id: @post.id) %>
-<%= link_to("食べたい済", "/likes/#{@post.id}/destroy", {method: "post"}) %>
+<% if @like %>
+<%= link_to("食べたい済", like_path(@like), {method: "delete"}) %>
 <% else %>
-<%= link_to("食べたい！", "/likes/#{@post.id}/create", {method: "post"}) %>
+<%= link_to("食べたい！", post_likes_path(@post), {method: "post"}) %>
 <% end %>

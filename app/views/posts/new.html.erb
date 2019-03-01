@@ -5,7 +5,7 @@
 
 
 
-<%= form_tag("/posts", multipart: true) do %>
+<%= form_tag(posts_path, multipart: true) do %>
     <textarea name="content"></textarea>
     <%= file_field_tag :image %>
     <input type="submit" value="投稿">

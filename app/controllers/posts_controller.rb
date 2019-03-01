@@ -12,7 +12,7 @@ class PostsController < ApplicationController
             image: params[:image]
         )
         if  @post.save
-            redirect_to("/posts/#{@post.id}")
+            redirect_to(post_path(@post))
         else
             render(:new)
         end
@@ -23,7 +23,9 @@ class PostsController < ApplicationController
     end
 
     def show
-        @post = Post.find(params[:id])
+				@post = Post.find(params[:id])
+				# @like = Like.find_by(user: current_user, post: @post)
+				@like = @post.likes.find_by(user: current_user)
     end
     
     private

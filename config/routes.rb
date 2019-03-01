@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "pages#index"
+	root to: "pages#index"
+	resources :posts, only: [:index, :show, :new, :create] do
+		resources :likes, only: :create
+	end
 
-  get "/posts/new" => "posts#new"
-  post "/posts" => "posts#create"
-  get "/posts" => "posts#index"
-  get "/posts/:id" => "posts#show"
+	resources :likes, only: :destroy
+  
 
-  post "/likes/:id/create" => "likes#create"
-	post "/likes/:id/destroy" => "likes#destroy"
+	# post "/posts/post_id/likes" => "likes#create"
 end
