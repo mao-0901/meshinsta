@@ -9,5 +9,4 @@ Rails.application.routes.draw do
 	resources :likes, only: :destroy
   
 
-	# post "/posts/post_id/likes" => "likes#create"
 end

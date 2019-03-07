@@ -1,0 +1,27 @@
+#header {
+	display: flex;
+	padding: 8px 16px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	align-items: center;
+	.logo {
+		width: 36px;
+	}
+	.sign-in {
+		margin-left: auto;
+		font-size: 14px;
+    text-decoration: none;
+	}
+	.sign-up {
+		margin-left: 16px;
+    background-color: gray;
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: white;
+    text-decoration: none;
+		font-size: 14px;
+		transition: opacity 0.2s ease-in-out;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

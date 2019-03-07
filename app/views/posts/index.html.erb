@@ -1,6 +1,13 @@
-<% @posts.each do |post| %>
-    <div>
-        <%= post.content %>
-        <%=link_to("リンク", post_path(post)) %>
-    </div>
-<% end %>
+<%= render partial: "partials/header" %>
+<main id="posts-index">
+	<ul>
+		<% @posts.each do |post| %>
+				<li>
+					<%=link_to post_path(post) do %>
+						<div class="img" style="background-image: url(<%= post.image.to_s %>);"></div>
+					<% end %>
+				</li>
+		<% end %>
+	</ul>
+</main>
+<%= render partial: "partials/footer" %>
