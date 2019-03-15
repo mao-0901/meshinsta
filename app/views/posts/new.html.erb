@@ -1,12 +1,28 @@
+<%= render partial: "partials/header" %>
+
 <% @post.errors.full_messages.each do |message| %>
     <%= message %>
 <% end %>
 
+<main id="post-new">
+	<div class="inner">
+		<div class="inner-inner">
+			<%= form_tag(posts_path, multipart: true) do %>
+				<div>
+					<textarea name="content" class="text-new"></textarea>
+				</div>
+				<div class="footer">
+					<div>
+						<%= file_field_tag :image, class: "picture" %>
+					</div>
+					<div class="submit">
+						<input type="submit" value="投稿" class="submit_btn">
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</main>
 
+<%= render partial: "partials/footer" %>
 
-
-<%= form_tag(posts_path, multipart: true) do %>
-    <textarea name="content"></textarea>
-    <%= file_field_tag :image %>
-    <input type="submit" value="投稿">
-<% end %>

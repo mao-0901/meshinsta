@@ -1,7 +1,20 @@
-<%= @post.content %>
-<%= image_tag @post.image.to_s %>
-<% if @like %>
-<%= link_to "食べたい済", like_path(@like), {method: "delete"} %>
-<% else %>
-<%= link_to "食べたい！", post_likes_path(@post), {method: "post"} %>
-<% end %>
+<%= render partial: "partials/header" %>
+<main id="posts-show">
+	<div class="inner">
+		<div class="img" style="background-image: url(<%= @post.image.to_s %>);"></div>
+		<div class="details">
+			<div class="content">
+				<%= @post.content %>
+			</div>
+
+			<footer>
+				<% if @like %>
+					<%= link_to "食べたい", like_path(@like), { method: "delete", class: "dislike" } %>
+				<% else %>
+					<%= link_to "食べたい", post_likes_path(@post), { method: "post", class: "like" } %>
+				<% end %>
+			</footer>
+		</div>
+	</div>
+</main>
+<%= render partial: "partials/footer" %>

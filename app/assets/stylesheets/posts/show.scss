@@ -1,0 +1,47 @@
+#posts-show .inner {
+	display: flex;
+	width: 1024px;
+	margin: 0 auto;
+	.img {
+		width: 600px;
+		height: 600px;
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: black;
+		
+	}
+	.details {
+		flex: 1;
+		.content {
+			box-shadow: 0px 0px 12px -6px grey inset;;
+			height: 500px;
+			overflow: scroll;
+			white-space: pre-wrap;
+			padding: 8px;
+		}
+		footer {
+			padding: 8px;
+			a {
+				display: inline-block;
+				text-decoration: none;
+				// color: white;
+				// text-decoration: none;
+				// padding: 10px 20px;
+				// font-size: 15px;
+				// border-radius: 20px;
+				// transition: opacity 0.2s ease-in-out;
+				// &:hover {
+				// 	opacity: 0.7;
+				// }
+				&.like {
+					color: palevioletred; 
+				}
+				&.dislike {
+					color:Gainsboro;
+
+				}
+			}
+		} 
+	}		
+}
