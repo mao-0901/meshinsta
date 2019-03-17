@@ -1,6 +1,10 @@
 <header id="header">
 	<a href="" class="logo"><img src="/img/onigirilogo.svg"></a>
-	<a href="" class="sign-in">ログイン</a>
-	<a href="" class="sign-up">新規登録</a>
+	<% if user_signed_in? %>
+		<%= link_to "ログアウト", destroy_user_session_path, { method: "delete", class: "sign-out"} %>
+	<% else %>
+		<%= link_to "ログイン", new_user_session_path, {class: "sign-in"} %>
+		<%= link_to "新規登録", new_user_registration_path, {class: "sign-up"} %>
+	<% end %>
 </header>
 
