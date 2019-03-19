@@ -26,12 +26,5 @@ class PostsController < ApplicationController
 				@post = Post.find(params[:id])
 				# @like = Like.find_by(user: current_user, post: @post)
 				@like = @post.likes.find_by(user: current_user)
-    end
-    
-    private
-    
-    def authenticate
-        redirect_to new_user_registration_path unless user_signed_in?
-    end 
-    
+    end  
 end
