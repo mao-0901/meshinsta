@@ -10,10 +10,10 @@ class PostsController < ApplicationController
             content: params[:content],
             user: current_user,
             image: params[:image]
-        )
-        if  @post.save
-            redirect_to(post_path(@post))
-        else
+				)
+				if  @post.save
+						redirect_to(post_path(@post))
+				else
             render(:new)
         end
     end
