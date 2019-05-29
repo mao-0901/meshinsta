@@ -9,8 +9,7 @@ CarrierWave.configure do |config|
     }
     config.fog_directory = ENV['CONOHA_CONTAINER_NAME']
     config.storage :fog
-    config.asset_host = ENV['CONOHA_ASSET_HOST'] + '/' +
-      ENV['CONOHA_CONTAINER_NAME']
+    config.asset_host = ENV['CONOHA_ASSET_HOST'] + '/' + ENV['CONOHA_CONTAINER_NAME']
   else
     config.storage :file
   end
