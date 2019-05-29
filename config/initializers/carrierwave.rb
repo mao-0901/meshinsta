@@ -1,5 +1,7 @@
 CarrierWave.configure do |config|
-  if Rails.env.production?
+	if Rails.env.production?
+		p '==========================='
+		p ENV
     config.fog_credentials = {
       provider: 'OpenStack',
       openstack_tenant: ENV['CONOHA_TENANT_NAME'],
