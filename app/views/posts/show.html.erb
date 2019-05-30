@@ -9,9 +9,9 @@
 
 			<footer>
 				<% if @like %>
-					<%= link_to "食べたい", like_path(@like), { method: "delete", class: "dislike" } %>
+					<a class="dislike" href="">食べたい</a> 
 				<% else %>
-					<%= link_to "食べたい", post_likes_path(@post), { method: "post", class: "like" } %>
+					<a class="like" href="">食べたい</a> 
 				<% end %>
 			</footer>
 		</div>
