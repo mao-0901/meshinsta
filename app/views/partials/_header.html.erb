@@ -1,6 +1,7 @@
 <header id="header">
 	<a href="" class="logo"><img src="/img/onigirilogo.svg"></a>
 	<% if user_signed_in? %>
+		<%= link_to "投稿", new_post_path, {class: "post-button"} %>
 		<%= link_to "ログアウト", destroy_user_session_path, { method: "delete", class: "sign-out"} %>
 	<% else %>
 		<%= link_to "ログイン", new_user_session_path, {class: "sign-in"} %>
