@@ -7,6 +7,13 @@ Rails.application.routes.draw do
 	end
 
 	resources :likes, only: :destroy
-  
+
+	namespace :api do
+		namespace :v1 do
+			resources :posts, only: :none do
+				resources :likes, only: :create
+			end
+		end
+	end
 
 end
