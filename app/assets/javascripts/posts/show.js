@@ -1,9 +1,11 @@
 $(document).on('turbolinks:load', function() {
 	console.log('reloaded1111')
 	$('#posts-show').on("click", ".like", function (event) {
+		// clickってなんぞ？？
 		console.log('like clicked')
 		event.preventDefault();
 		var $this = $(this)
+		// this ってなんぞ？？
 		var postId = $(this).data('post-id');
 		$.ajax({
 			url:'/api/v1/posts/' + postId + '/likes' ,
@@ -13,7 +15,7 @@ $(document).on('turbolinks:load', function() {
 			$this.addClass("dislike").removeClass("like")
 		})
 		// .done(function(){
-		// 	console.log('==========')
+		// console.log('==========')
 		// 	$(this).addClass("dislike").removeClass("like")
 		// });
 	});
