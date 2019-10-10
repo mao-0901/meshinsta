@@ -1,0 +1,39 @@
+#signup-form .inner {
+  padding: 18px;
+}
+
+#signup-form .inner h2 {
+  font-size: 20px;
+}
+
+#signup-form .inner .email {
+  padding-top: 12px;
+}
+
+#signup-form .inner .password {
+  padding-top: 12px;
+}
+
+#signup-form .inner .password-confirmation {
+  padding-top: 8px;
+}
+
+#signup-form .inner .password-confirmation .field label {
+  font-size: 12px;
+}
+
+#signup-form .inner .actions .login-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 2px;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  background-color: #3366CC;
+  color: white;
+}
+/*# sourceMappingURL=registrations_new.css.map */

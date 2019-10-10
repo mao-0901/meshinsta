@@ -9,9 +9,9 @@
 
 			<footer>
 				<% if @like %>
-					<a class="dislike" href="">食べたい</a> 
+					<a data-post-id=<%= @post.id %> class="dislike" href="">食べたい</a> 
 				<% else %>
-					<a class="like" href="">食べたい</a> 
+					<a data-post-id=<%= @post.id %> class="like" href="">食べたい</a> 
 				<% end %>
 			</footer>
 		</div>

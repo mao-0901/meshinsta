@@ -1,0 +1,36 @@
+#login-form .inner {
+	padding: 18px;
+	h2 {
+		font-size: 20px;
+	}
+	.email {
+		padding-top: 12px;
+	}
+	.password {
+		padding-top: 12px;
+	}
+
+	.remember {
+		padding-top: 8px;
+		.field label {
+			font-size: 12px;
+		}
+	}
+
+	.actions {
+		.login-button {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border: none;
+			padding: 2px;
+			border-radius: 8px;
+			width: 80px;
+			margin-top: 4px;
+			margin-bottom: 20px;
+			font-size: 12px;
+			background-color: #3366CC;
+			color: white;
+		}
+	}
+}

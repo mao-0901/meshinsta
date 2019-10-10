@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC,MAAM,CAAC,CAAC,CAAA;EAIf,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,GAAG;CACT",
+    "sources": [
+        "shared.scss"
+    ],
+    "names": [],
+    "file": "shared.css"
+}

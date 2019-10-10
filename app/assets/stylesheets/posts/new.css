@@ -1,0 +1,53 @@
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.inner .inner-inner {
+  width: 580px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.inner .inner-inner .text-new {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 180px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.inner .inner-inner .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 4px;
+}
+
+.inner .inner-inner .footer .submit {
+  margin-left: auto;
+}
+
+.inner .inner-inner .footer .submit .submit_btn {
+  background-color: gray;
+  border-radius: 18px;
+  padding: 8px 16px;
+  color: white;
+  font-size: 14px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.inner .inner-inner .footer .submit .submit_btn:hover {
+  opacity: 0.7;
+}
+
+.inner .inner-inner .footer .submit input {
+  border-style: none;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=new.css.map */
