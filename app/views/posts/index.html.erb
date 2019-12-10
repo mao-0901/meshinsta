@@ -1,5 +1,6 @@
 <%= render partial: "partials/header" %>
 <main id="posts-index">
+  <%=link_to '店舗検索', api_v1_gurunavi_path%>
 	<ul>
 		<% @posts.each do |post| %>
 				<li>
@@ -11,3 +12,7 @@
 	</ul>
 </main>
 <%= render partial: "partials/footer" %>
+
+
+
+

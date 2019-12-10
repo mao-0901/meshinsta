@@ -1,0 +1,10 @@
+<main id="users-show">
+	<div><%=@user.email%></div>
+  <ul>
+	  <% @user.posts.each do |post| %>
+	    <li>
+			  <div class="img" style="background-image: url(<%= post.image.to_s %>)"></div>
+			</li>
+	  <% end %>
+	</ul>
+</main>
