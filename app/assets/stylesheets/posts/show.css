@@ -21,6 +21,21 @@
           flex: 1;
 }
 
+#posts-show .inner .details a {
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#posts-show .inner .details a:hover {
+  color: skyblue;
+}
+
+#posts-show .inner .details a .user_name {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
 #posts-show .inner .details .content {
   -webkit-box-shadow: 0px 0px 12px -6px grey inset;
           box-shadow: 0px 0px 12px -6px grey inset;

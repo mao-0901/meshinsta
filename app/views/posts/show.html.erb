@@ -3,6 +3,9 @@
 	<div class="inner">
 		<div class="img" style="background-image: url(<%= @post.image.to_s %>);"></div>
 		<div class="details">
+		  <%=link_to user_path(@post.user_id) do %>
+		　  <div class="user_name">Contributor★<%=@post.user.name%></div>
+		  <% end %>
 			<div class="content">
 				<%= @post.content %>
 			</div>
