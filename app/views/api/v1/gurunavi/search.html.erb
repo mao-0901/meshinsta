@@ -1,0 +1,5 @@
+<%@shops.each do |shop| %>
+	<div><%= shop['name']%></div>
+	<div><%= shop['address']%></div>
+	<div><%= link_to '詳細', shop['url']%></div>
+<% end %>

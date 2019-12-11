@@ -1,3 +1,12 @@
+#posts-index {
+  margin-top: 12px;
+}
+
+#posts-index .search_shops {
+  margin-left: 12px;
+  text-decoration: none;
+}
+
 #posts-index ul {
   display: -webkit-box;
   display: -ms-flexbox;

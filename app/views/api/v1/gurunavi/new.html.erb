@@ -1,0 +1,6 @@
+<p>検索</p>
+	<%= form_tag(api_v1_gurunavi_search_path, method: :get) do %>
+		<%= text_field_tag :search %>
+		<%= submit_tag '検索' %>
+	<% end %>
+	

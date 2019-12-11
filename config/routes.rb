@@ -7,11 +7,16 @@ Rails.application.routes.draw do
 	end
 
 	resources :likes, only: :destroy
+	resources :users, only: :show
 
 	namespace :api do
 		namespace :v1 do
 			resources :posts, only: :none do
 				resources :likes, only: [:create]
+			end
+			namespace :gurunavi do
+				get "/search", :action  => "search"
+				get "/", :action => "new"
 			end
 		end
 	end

@@ -1,26 +1,33 @@
-#posts-index ul {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	width: 1024px;
-	margin: 0 auto;
-	padding: 80px 0 120px; 
-	&:after {
-		width: 300px;
-		content: "";
+#posts-index {
+margin-top: 12px;
+  .search_shops {
+		margin-left: 12px;
+    text-decoration: none;
 	}
-	li {
-		width: 300px;
-		height: 300px;
-		&:nth-child(n+4) {
-			margin-top: 62px
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 1024px;
+		margin: 0 auto;
+		padding: 80px 0 120px; 
+		&:after {
+			width: 300px;
+			content: "";
 		}
-		a {
-			.img {
-				width: 100%;
-				height: 100%;
-				background-position: center center;
-				background-size: cover;
+		li {
+			width: 300px;
+			height: 300px;
+			&:nth-child(n+4) {
+				margin-top: 62px
+			}
+			a {
+				.img {
+					width: 100%;
+					height: 100%;
+					background-position: center center;
+					background-size: cover;
+				}
 			}
 		}
 	}
