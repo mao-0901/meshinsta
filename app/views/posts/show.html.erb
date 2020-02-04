@@ -11,10 +11,27 @@
 			</div>
 
 			<footer>
+<<<<<<< Updated upstream
 				<% if @like %>
 					<a data-post-id=<%= @post.id %> class="dislike" href="">食べたい</a> 
 				<% else %>
+<<<<<<< Updated upstream
 					<a data-post-id=<%= @post.id %> class="like" href="">食べたい</a> 
+=======
+					<a class="like" href="">食べたい</a> 
+=======
+			　<% if @post.user != current_user %>
+					<% if @like %>
+						<a data-post-id=<%= @post.id %> class="dislike" href="">食べたい</a> 
+					<% else %>
+						<a data-post-id=<%= @post.id %> class="like" href="">食べたい</a> 
+					<% end %>
+				<% end %>
+
+				<% if @post.user == current_user %>
+				  <%=link_to "削除", post_path(@post), method: :delete %>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 				<% end %>
 			</footer>
 		</div>

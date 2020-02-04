@@ -45,7 +45,8 @@ group :development, :test do
 	gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 	gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
+	gem 'rails-controller-testing'
+	gem 'pry-rails'
 end
 
 group :development do

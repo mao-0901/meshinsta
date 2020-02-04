@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2019_12_11_143851) do
+=======
+<<<<<<< Updated upstream
+ActiveRecord::Schema.define(version: 2019_02_28_112434) do
+=======
+ActiveRecord::Schema.define(version: 2019_12_16_102703) do
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -25,6 +33,16 @@ ActiveRecord::Schema.define(version: 2019_12_11_143851) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "follow_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["follow_id"], name: "index_relationships_on_follow_id"
+    t.index ["user_id", "follow_id"], name: "index_relationships_on_user_id_and_follow_id", unique: true
+    t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

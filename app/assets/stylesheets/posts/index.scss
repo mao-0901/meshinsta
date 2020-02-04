@@ -1,8 +1,32 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+#posts-index ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1024px;
+	margin: 0 auto;
+	padding: 80px 0 120px; 
+	&:after {
+		width: 300px;
+		content: "";
+=======
+>>>>>>> Stashed changes
 #posts-index {
 margin-top: 12px;
   .search_shops {
 		margin-left: 12px;
+<<<<<<< Updated upstream
     text-decoration: none;
+=======
+		text-decoration: none;
+		transition: color 0.3s;
+	    &:hover {
+		    color: skyblue;
+	    }
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 	}
 	ul {
 		display: flex;

@@ -18,13 +18,19 @@ class PostsController < ApplicationController
         end
     end
 
-    def index
-        @posts = Post.all.order(created_at: :desc)
+		def index
+				@posts = Post.all.order(created_at: :desc)
+				binding.pry
     end
 
     def show
 				@post = Post.find(params[:id])
 				# @like = Like.find_by(user: current_user, post: @post)
 				@like = @post.likes.find_by(user: current_user)
-    end  
+		end 
+		
+		def destroy
+			@post = Post.find(params[:id]).destroy
+			redirect_to user_path(current_user)
+		end
 end
